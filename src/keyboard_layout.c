@@ -150,16 +150,19 @@ int main(int argc, char **argv) {
 
       struct json_object *input = NULL;
       if (!json_object_object_get_ex(jobj, "input", &input)) {
+        json_object_put(jobj);
         continue;
       }
 
       struct json_object *xkb_active_layout_name;
       if (!json_object_object_get_ex(input, "xkb_active_layout_name", &xkb_active_layout_name)) {
+        json_object_put(jobj);
         continue;
       }
 
       const char *xkb_active_layout_name_str = json_object_get_string(xkb_active_layout_name);
       if (xkb_active_layout_name_str == NULL) {
+        json_object_put(jobj);
         continue;
       }
 
