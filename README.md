@@ -19,7 +19,7 @@ make
 ```bash
 network-traffic <interface>...
 ```
-Periodically prints the amount of data sent and received on the given interfaces to stdout. The output is formatted as JSON and can be used directly by waybar.
+Periodically prints the amount of data sent and received on the given interfaces to stdout. Prints the sum of the given interfaces if more than one interface is given. The output is formatted as JSON and can be used directly by waybar.
 ```json
 "custom/network_traffic": {
     "exec": "/path/to/network-traffic wlan0",
