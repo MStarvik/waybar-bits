@@ -38,7 +38,6 @@ Prints the current keyboard layout to stdout. Uses `swaymsg -t subscribe` to lis
     "exec": "/path/to/keyboard-layout",
     "return-type": "json",
     "tooltip": false,
-    "format": " {}",
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
 },
 ```
